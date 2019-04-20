@@ -13,7 +13,7 @@
 
 while true
 do
-	sleep 300
+	sleep 60
 	if ! iwgetid &> /dev/null; then
 		echo "Wi-Fi network is down, reloading kernel module"
 		modprobe -r brcmfmac
