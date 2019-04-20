@@ -1,0 +1,9 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine
+
+# Install package containing iwgetid
+RUN apk add --no-cache wireless-tools
+
+WORKDIR /root
+COPY start.sh .
+
+CMD ["bash", "start.sh"]

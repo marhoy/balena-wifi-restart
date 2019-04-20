@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  
+  wifirestart:
+    build: .
+    restart: always
+    network_mode: "host"
+    labels:
+      io.balena.features.dbus: '1'
